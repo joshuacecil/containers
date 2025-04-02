@@ -1,8 +1,8 @@
 apiVersion: apps/v1
 kind: service
 metadata: 
- labels:
-   name: loadblancerservice
+  name: testapp-service  # Not "undefined"—fix if it’s wrong
+  namespace: default
 spec:
   selector: 
      app: testApp
