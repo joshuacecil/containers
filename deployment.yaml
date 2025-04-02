@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: testdeployment
+spec: 
+ replicas: 2
+ selector: 
+  matchLabels: 
+   app: testApp
+ template: 
+  metadata:
+    labels:
+      app: testApp
+  spec:
+    containers: 
+      - name: web
+        image: cecil7777/test:version1
+        ports:
+          - containerPort: 80  
+
+  
