@@ -16,7 +16,7 @@ spec:
         app: testapp
     spec:
       containers:
-        - image: cecil7777/test:version1
+        - image: cecil7777/test:version2
           name: web
           ports:
             - containerPort: 80
