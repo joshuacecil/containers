@@ -13,7 +13,7 @@ spec:
   template:
     metadata:
       labels:
-        app: testApp
+        app: testapp
     spec:
       containers:
         - image: cecil7777/test:version1
