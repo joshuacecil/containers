@@ -1,16 +1,15 @@
 apiVersion: apps/v1
 kind: service
-metadata: 
-  name: testapp-service  # Not "undefined"—fix if it’s wrong
+metadata:
+  labels:
+    app.kubernetes.io/instance: testapp
+  name: testapp-service
   namespace: default
 spec:
-  selector: 
-     app: testApp
-  type: LoadBalancer
   ports:
-    - targetPort: 80
+    - nodePort: 30008
       port: 80
-      nodePort: 30008
-
-
-
+      targetPort: 80
+  selector:
+    app: testApp
+  type: LoadBalancer
