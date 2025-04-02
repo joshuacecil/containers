@@ -7,8 +7,6 @@ spec:
   selector:
     app: testapp
   type: LoadBalancer
-  selector:
-    app.kubernetes.io/name: MyApp
   ports:
     - protocol: TCP
       port: 80
